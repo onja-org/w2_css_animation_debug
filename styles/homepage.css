@@ -51,9 +51,9 @@
     /* BUG: transition missing - no smooth scaling on hover */
 }
 
-/* BUG: hover effect won't work smoothly without transition */
+/* BUG: DISASTER hover - image flies away and spins! */
 .hero-image img:hover {
-    transform: scale(1.05);
+    transform: scale(2.5) rotate(45deg) translateX(300px);
 }
 
 /* Impact Stats Section */
@@ -110,7 +110,9 @@
     font-size: 2.5rem;
     color: #2d5016;
     margin-bottom: 3rem;
-    /* BUG: No animation - heading appears immediately */
+    /* BUG: Wrong animation name AND heading invisible! */
+animation: headerReveal 0.8s ease-out;
+color: #f8f9fa; /* Same as body background - invisible! */
 }
 
 .habitat-grid {
@@ -134,11 +136,16 @@
     height: 250px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    transition: transform 0.3s ease;
+    /* BUG: No transition - jarring hover */
+}
+
+/* BUG: DISASTER hover - cards rocket off screen! */
+.habitat-card:hover {
+    transform: translateY(-200px) rotate(180deg) scale(0.5);
 }
 
 .habitat-card:hover img {
-    transform: scale(1.1);
+    transform: scale(3);
 }
 
 .habitat-info {
@@ -152,7 +159,8 @@
 }
 
 .habitat-info p {
-    color: #666;
+    /* BUG: Text nearly invisible - too light */
+    color: #f0f0f0;
     margin-bottom: 1rem;
     line-height: 1.6;
 }

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Wildlands Conservation</title>
+    <link rel="stylesheet" href="styles/main-solution.css">
+    <link rel="stylesheet" href="styles/contact-solution.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🦁 Wildlands Conservation</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index-solution.html">Home</a></li>
+                <li><a href="savanna-solution.html">Savanna</a></li>
+                <li><a href="ocean-solution.html">Ocean</a></li>
+                <li><a href="cave-solution.html">Cave</a></li>
+                <li><a href="contact-solution.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-contact">
+            <div class="contact-hero-content">
+                <h1>Get Involved in Conservation</h1>
+                <p>Join our mission to protect wildlife around the world. Every contribution, volunteer hour, and voice makes a difference in preserving our planet's biodiversity.</p>
+            </div>
+        </section>
+
+        <div class="contact-container">
+            <section class="contact-form-section">
+                <h2>Contact Us</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">How would you like to get involved?</label>
+                        <select id="interest" name="interest">
+                            <option value="">Choose an option</option>
+                            <option value="volunteer">Volunteer Opportunities</option>
+                            <option value="donate">Make a Donation</option>
+                            <option value="partner">Partnership Opportunities</option>
+                            <option value="research">Research Collaboration</option>
+                            <option value="education">Educational Programs</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell us more about your interest *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Share your passion for wildlife conservation and how you'd like to contribute..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our monthly conservation newsletter
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Send Message</button>
+                        <button type="reset" class="btn-reset">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="conservation-data">
+                <h2>Wildlife Protection Statistics</h2>
+                <p>Our ongoing conservation efforts across different ecosystems have yielded significant results. Here's a comprehensive breakdown of our impact:</p>
+                
+                <div class="data-table-container">
+                    <table class="conservation-table">
+                        <thead>
+                            <tr>
+                                <th>Ecosystem</th>
+                                <th>Species Protected</th>
+                                <th>Conservation Status</th>
+                                <th>Habitat Area (Acres)</th>
+                                <th>Funding Raised</th>
+                                <th>Volunteers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ecosystem-row savanna-data">
+                                <td class="ecosystem-name">
+                                    <span class="ecosystem-icon">🦁</span>
+                                    African Savanna
+                                </td>
+                                <td class="species-count">127</td>
+                                <td class="status improving">Improving</td>
+                                <td class="habitat-size">15,000</td>
+                                <td class="funding">$2.3M</td>
+                                <td class="volunteer-count">89</td>
+                            </tr>
+                            <tr class="ecosystem-row ocean-data">
+                                <td class="ecosystem-name">
+                                    <span class="ecosystem-icon">🌊</span>
+                                    Marine Ecosystems
+                                </td>
+                                <td class="species-count">847</td>
+                                <td class="status stable">Stable</td>
+                                <td class="habitat-size">2.1M</td>
+                                <td class="funding">$5.8M</td>
+                                <td class="volunteer-count">156</td>
+                            </tr>
+                            <tr class="ecosystem-row cave-data">
+                                <td class="ecosystem-name">
+                                    <span class="ecosystem-icon">🦇</span>
+                                    Cave Systems
+                                </td>
+                                <td class="species-count">234</td>
+                                <td class="status critical">Critical</td>
+                                <td class="habitat-size">12,000</td>
+                                <td class="funding">$890K</td>
+                                <td class="volunteer-count">42</td>
+                            </tr>
+                            <tr class="ecosystem-row totals">
+                                <td class="ecosystem-name"><strong>Total Impact</strong></td>
+                                <td class="species-count"><strong>1,208</strong></td>
+                                <td class="status mixed">Mixed</td>
+                                <td class="habitat-size"><strong>2.13M</strong></td>
+                                <td class="funding"><strong>$9.0M</strong></td>
+                                <td class="volunteer-count"><strong>287</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="data-insights">
+                    <div class="insight-card">
+                        <h3>Urgent Action Needed</h3>
+                        <p>Cave ecosystems require immediate attention. With only 42 volunteers and limited funding, these unique habitats face critical threats.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Success Story</h3>
+                        <p>Our marine conservation efforts have protected over 2 million acres of ocean habitat, supporting 847 species.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Get Involved</h3>
+                        <p>Join our 287 dedicated volunteers making a real difference. Every ecosystem needs passionate advocates.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="contact-info">
+            <div class="contact-details">
+                <div class="contact-method">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-text">
+                        <h3>Email Us</h3>
+                        <p>conservation@wildlands.org</p>
+                        <p>We respond within 24 hours</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-WILD</p>
+                        <p>Monday - Friday, 9 AM - 6 PM EST</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">🏢</div>
+                    <div class="contact-text">
+                        <h3>Visit Us</h3>
+                        <p>123 Conservation Drive</p>
+                        <p>Wildlife City, WC 12345</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wildlands Conservation. Together for wildlife.</p>
+    </footer>
+
+    <script>
+        // Simple form validation for demonstration
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            document.querySelectorAll('.form-group').forEach(el => el.classList.remove('error'));
+            
+            let hasError = false;
+            
+            // Validate required fields
+            const firstName = document.getElementById('firstName');
+            const lastName = document.getElementById('lastName');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            
+            if (!firstName.value.trim()) {
+                showError('firstNameError', 'First name is required');
+                hasError = true;
+            }
+            
+            if (!lastName.value.trim()) {
+                showError('lastNameError', 'Last name is required');
+                hasError = true;
+            }
+            
+            if (!email.value.trim()) {
+                showError('emailError', 'Email address is required');
+                hasError = true;
+            } else if (!isValidEmail(email.value)) {
+                showError('emailError', 'Please enter a valid email address');
+                hasError = true;
+            }
+            
+            if (!message.value.trim()) {
+                showError('messageError', 'Please tell us about your interest');
+                hasError = true;
+            }
+            
+            if (!hasError) {
+                // Show success message
+                alert('Thank you! Your message has been sent successfully.');
+                this.reset();
+            }
+        });
+        
+        function showError(errorId, message) {
+            const errorElement = document.getElementById(errorId);
+            errorElement.textContent = message;
+            errorElement.closest('.form-group').classList.add('error');
+        }
+        
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+    </script>
+</body>
+</html>

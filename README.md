@@ -17,13 +17,17 @@ The Wildlands Conservation website is broken just hours before tomorrow's major 
 - **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately  
 - **Habitat cards don't flow in**: The conservation area cards should fade up one by one, but they all appear at once
 
-### Interactive Problems  
+### Interactive Disasters  
 - **Navigation feels jarring**: The navigation links should smoothly transition when hovered, but they snap between states
 - **Donate button text disappears**: The primary button text becomes completely invisible when hovered
 - **Secondary button jumps**: The "Learn More" button feels jarring when interacted with
+- **Hero image goes crazy**: The main elephant image spins and flies off screen when hovered
+- **Habitat cards rocket away**: Conservation area cards flip upside down and shoot off screen when hovered
 
 ### Content Issues
 - **Images not loading**: The wildlife images are showing as broken image icons instead of the beautiful conservation photos
+- **Section heading invisible**: The "Explore Our Conservation Areas" heading can't be seen
+- **Habitat descriptions unreadable**: The text describing each habitat is nearly invisible
 
 ### Navigation Behavior Issues
 - **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
@@ -110,24 +114,65 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 ## 🦁 Additional Conservation Areas (Choose Your Next Challenge)
 
 ### 🦁 Savanna Section
-- **DRAMATICALLY broken layout**: Grid system completely collapsed
-- **Hover disasters**: Animal cards flying off screen when hovered
-- **Navigation chaos**: Links behaving completely wrong
+**What's Obviously Broken:**
+- **Layout collapsed**: All animal cards stacked in narrow column instead of grid
+- **Cards fly away on hover**: Animal cards shoot off screen when you hover over them
+- **Text invisible**: Headings and descriptions are unreadable (white/gray on white)
+- **Status badges invisible**: All conservation status labels are same color as background
+
+**Debugging Checklist:**
+- [ ] Fix grid layout - animals should display in responsive grid
+- [ ] Fix hover disasters - cards should lift gently, not fly away
+- [ ] Fix text visibility - all text should be readable with good contrast  
+- [ ] Fix status badge colors - each status should have distinct, readable colors
+- [ ] Fix navigation link targets - some open in wrong tab/window
+- [ ] Fix hover interactions - images should scale smoothly, not jerk
 
 ### 🌊 Ocean Section  
-- **Swimming animations dead in the water**: Fish completely motionless
-- **Responsive layout disaster**: Content overflowing and overlapping
-- **Interaction meltdown**: Nothing responds to user interaction
+**What's Obviously Broken:**
+- **All animations dead**: Fish aren't swimming, waves aren't moving, bubbles aren't floating
+- **Layout disaster**: Species cards crammed into impossibly narrow columns
+- **Hover disasters**: Cards disappear when hovered, images explode in size
+- **Images missing**: All marine animal photos showing as broken image icons
+
+**Debugging Checklist:**
+- [ ] Fix fish swimming animations - all fish should move across the aquarium
+- [ ] Fix wave animations - ocean waves should move smoothly
+- [ ] Fix bubble floating animations - stats bubbles should gently float up and down
+- [ ] Fix responsive layout - species cards should fit properly on all screen sizes  
+- [ ] Fix hover interactions - cards should lift, not disappear or explode
+- [ ] Fix broken images - update file extensions from .jpg to .svg
+- [ ] Fix coral/seaweed swaying - underwater plants should move gently
 
 ### 🦇 Cave Section
-- **Visibility nightmare**: Text completely unreadable on dark backgrounds
-- **Contrast disasters**: Critical content invisible to users
-- **Animation timing chaos**: Effects happening at wrong times or not at all
+**What's Obviously Broken:**
+- **Text completely invisible**: Almost all text is unreadable (dark text on dark backgrounds)
+- **Navigation invisible**: Logo and links can't be seen
+- **Critical info hidden**: Conservation status and important details are invisible
+- **Animations frozen**: Bats aren't flying, stalactites aren't dripping, lights aren't flickering
+
+**Debugging Checklist:**
+- [ ] Fix text contrast - all text should be light colors on dark backgrounds
+- [ ] Fix navigation visibility - logo and links should be clearly visible
+- [ ] Fix section headings - all headings should stand out from backgrounds
+- [ ] Fix info card text - descriptions and details should be readable
+- [ ] Fix bat flying animations - bats should fly around the cave area
+- [ ] Fix stalactite dripping - cave formations should move slightly
+- [ ] Fix light flickering - cave lighting should create atmospheric effects
+- [ ] Fix hover states - interactions should make things more visible, not less
 
 ### 📧 Contact Section
-- **Form interaction disasters**: Buttons don't work, inputs behave strangely
-- **Validation chaos**: Error messages appearing in wrong places
-- **Submission failures**: Forms don't respond properly to user input
+**What's Obviously Broken:**
+- **Form disasters**: Buttons don't respond, inputs behave strangely  
+- **Data table chaos**: Wildlife data table has missing or broken structure
+- **Validation mayhem**: Error messages appear in wrong places or not at all
+
+**Debugging Checklist:**
+- [ ] Fix form submission - contact form should respond to user interaction
+- [ ] Fix input styling - form fields should look and behave professionally  
+- [ ] Fix table structure - wildlife data should display in organized rows/columns
+- [ ] Fix validation feedback - error states should be clear and helpful
+- [ ] Fix button interactions - all buttons should have proper hover/click states
 
 ---
 
