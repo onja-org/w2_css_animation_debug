@@ -1,5 +1,7 @@
 # Wildlands Conservation - Animation Debug Lab
 
+<img src="./images/animation_debug_preview.png"  alt="Homepage Image" />
+
 ## 🌟 First Things First: See the Vision
 
 **Before you start debugging, explore the working version to understand what you're building toward:**
@@ -209,6 +211,8 @@ The Wildlands Conservation website is broken just hours before tomorrow's major 
 
 - **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
 
+<img src="./images/animation_debug_1.png" width="500" alt="Homepage Image" />
+
 ---
 
 ## ✅ When You've Fixed the Homepage
@@ -243,6 +247,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - [ ] Fix navigation link targets - some open in wrong tab/window
 - [ ] Fix hover interactions - images should scale smoothly, not jerk
 
+<img src="./images/animation_debug_2.png" width="400" alt="Homepage Image" />
+
 ### 🌊 Ocean Section
 
 **What's Obviously Broken:**
@@ -261,6 +267,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - [ ] Fix hover interactions - cards should lift, not disappear or explode
 - [ ] Fix broken images - update file extensions from .jpg to .svg
 - [ ] Fix coral/seaweed swaying - underwater plants should move gently
+
+<img src="./images/animation_debug_3.png" width="400" alt="Homepage Image" />
 
 ### 🦇 Cave Section
 
@@ -282,6 +290,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - [ ] Fix light flickering - cave lighting should create atmospheric effects
 - [ ] Fix hover states - interactions should make things more visible, not less
 
+<img src="./images/animation_debug_4.png" width="400" alt="Homepage Image" />
+
 ### 📧 Contact Section
 
 **What's Obviously Broken:**
@@ -298,6 +308,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - [ ] Fix table structure - wildlife data should display in organized rows/columns
 - [ ] Fix validation feedback - error states should be clear and helpful
 - [ ] Fix button interactions - all buttons should have proper hover/click states
+
+<img src="./images/animation_debug_5.png" width="400" alt="Homepage Image" />
 
 ---
 
