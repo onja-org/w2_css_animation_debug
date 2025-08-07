@@ -11,47 +11,14 @@
 
 **Then look at the broken version and feel the pain:**
 
-- Open `index.html` and see the chaos
+- Open `index.html` -- navigate around to the different biomes and see the chaos
 - Notice how dramatically different it feels from the polished solution
-- **Your mission**: Transform the disasters back into the beautiful working version!
+- **Your mission**: Transform the disasters into a beautiful working version!
+- Yours doesn't have to be exactly like the solution, but it should not feel broken -- it should feel polished and professional.
 
----
+You have 4 hours for this lab, so take your time in really investigating the issues and seeing if you can figure out how to fix them on your own. If you get totally stuck, you can look at the solution files for inspiration, but try to avoid that until you've spent a good amount of time debugging the issue. When you do look at a solution, try to understand _why_ the solution works, not just copy it.
 
-## 🚨 URGENT: Critical Bug Fixes Needed
-
-The Wildlands Conservation website is broken just hours before tomorrow's major donor presentation! The development team is counting on you to identify and fix the critical issues that are preventing the site from making the impact it needs.
-
-**Your Mission**: Debug and fix animation and interaction issues across the conservation site. Use your developer tools investigation skills to identify problems and implement solutions.
-
----
-
-## 🏠 Homepage (START HERE - High Priority)
-
-**Problems Reported by the Marketing Team:**
-
-### Animation Issues
-
-- **Hero section feels static**: The main content should smoothly slide in from the left when the page loads, but nothing is happening
-- **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately
-- **Habitat cards don't flow in**: The conservation area cards should fade up one by one, but they all appear at once
-
-### Interactive Disasters
-
-- **Navigation feels jarring**: The navigation links should smoothly transition when hovered, but they snap between states
-- **Donate button text disappears**: The primary button text becomes completely invisible when hovered
-- **Secondary button jumps**: The "Learn More" button feels jarring when interacted with
-- **Hero image goes crazy**: The main elephant image spins and flies off screen when hovered
-- **Habitat cards rocket away**: Conservation area cards flip upside down and shoot off screen when hovered
-
-### Content Issues
-
-- **Images not loading**: The wildlife images are showing as broken image icons instead of the beautiful conservation photos
-- **Section heading invisible**: The "Explore Our Conservation Areas" heading can't be seen
-- **Habitat descriptions unreadable**: The text describing each habitat is nearly invisible
-
-### Navigation Behavior Issues
-
-- **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
+Before you start your debugging journey, take some time to read through the developer tools survival guide below. It will help you build a strong foundation for investigating and fixing the issues you'll encounter.
 
 ---
 
@@ -205,6 +172,45 @@ When you encounter an animation that isn't working, try these systematic approac
 
 ---
 
+## 🚨 URGENT: Critical Bug Fixes Needed
+
+The Wildlands Conservation website is broken just hours before tomorrow's major donor presentation! The development team is counting on you to identify and fix the critical issues that are preventing the site from making the impact it needs.
+
+**Your Mission**: Debug and fix animation and interaction issues across the conservation site. Use your developer tools investigation skills to identify problems and implement solutions.
+
+---
+
+
+## 🏠 Homepage (START HERE - High Priority)
+
+**Problems Reported by the Marketing Team:**
+
+### Animation Issues
+
+- **Hero section feels static**: The main content should smoothly slide in from the left when the page loads, but nothing is happening
+- **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately
+- **Habitat cards don't flow in**: The conservation area cards should fade up one by one, but they all appear at once
+
+### Interactive Disasters
+
+- **Navigation feels jarring**: The navigation links should smoothly transition when hovered, but they snap between states
+- **Donate button text disappears**: The primary button text becomes completely invisible when hovered
+- **Secondary button jumps**: The "Learn More" button feels jarring when interacted with
+- **Hero image goes crazy**: The main elephant image spins and flies off screen when hovered
+- **Habitat cards rocket away**: Conservation area cards flip upside down and shoot off screen when hovered
+
+### Content Issues
+
+- **Images not loading**: The wildlife images are showing as broken image icons instead of the beautiful conservation photos
+- **Section heading invisible**: The "Explore Our Conservation Areas" heading can't be seen
+- **Habitat descriptions unreadable**: The text describing each habitat is nearly invisible
+
+### Navigation Behavior Issues
+
+- **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
+
+---
+
 ## ✅ When You've Fixed the Homepage
 
 Once the homepage animations are flowing smoothly and all interactions feel polished:
@@ -286,7 +292,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 
 **Debugging Checklist:**
 
-- [ ] Fix form submission - contact form should respond to user interaction
+- [ ] Fix form submission - contact form should respond to user interaction with a popup alert message
+    - You don't know much about JavaScript, but see if you can figure out what's wrong! There are some hints in the HTML comments. If you can't figure this out, it's ok.
 - [ ] Fix input styling - form fields should look and behave professionally
 - [ ] Fix table structure - wildlife data should display in organized rows/columns
 - [ ] Fix validation feedback - error states should be clear and helpful
