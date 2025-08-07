@@ -2,370 +2,385 @@
 
 /* Hero Section with DEAD Waves */
 .hero-ocean {
-    background: linear-gradient(180deg, #87CEEB 0%, #4682B4 50%, #191970 100%);
-    height: 70vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: white;
+  background: linear-gradient(180deg, #87ceeb 0%, #4682b4 50%, #191970 100%);
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
 }
 
 .ocean-waves {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 200px;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/></svg>') repeat-x;
-    /* BUG: Animation completely missing - waves are dead still! */
-    opacity: 0.3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/></svg>')
+    repeat-x;
+  /* BUG: Animation completely missing - waves are dead still! */
+  opacity: 0.3;
 }
 
 .wave-2 {
-    /* BUG: Wrong animation name - waves don't move */
-    animation: oceanFlow 8s linear infinite reverse;
-    opacity: 0.2;
-    height: 150px;
+  /* BUG: Wrong animation name - waves don't move */
+  animation: oceanFlow 8s linear infinite reverse;
+  opacity: 0.2;
+  height: 150px;
 }
 
 .wave-3 {
-    /* BUG: Another wrong animation name */
-    animation: waterMotion 12s linear infinite;
-    opacity: 0.1;
-    height: 100px;
+  /* BUG: Another wrong animation name */
+  animation: waterMotion 12s linear infinite;
+  opacity: 0.1;
+  height: 100px;
 }
 
 .ocean-content {
-    text-align: center;
-    z-index: 10;
-    position: relative;
+  text-align: center;
+  z-index: 10;
+  position: relative;
 }
 
 .hero-ocean h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* BUG: Wrong animation name */
-    animation: riseUp 1s ease-out;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* BUG: Wrong animation name */
+  animation: riseUp 1s ease-out;
 }
 
 .ocean-description {
-    font-size: 1.3rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    /* BUG: Animation missing completely */
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* BUG: Animation missing completely */
 }
 
 /* Marine Life Section - ANIMATION GRAVEYARD */
 .marine-life {
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #B0E0E6 0%, #87CEEB 100%);
-    position: relative;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #b0e0e6 0%, #87ceeb 100%);
+  position: relative;
 }
 
 .marine-life h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #191970;
-    margin-bottom: 3rem;
-    /* BUG: Wrong animation */
-    animation: slideFromTop 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #191970;
+  margin-bottom: 3rem;
+  /* BUG: Wrong animation */
+  animation: slideFromTop 0.8s ease-out;
 }
 
 .aquarium {
-    max-width: 1000px;
-    margin: 0 auto;
-    height: 400px;
-    background: linear-gradient(180deg, #87CEEB 0%, #4682B4 100%);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 5px solid #191970;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 400px;
+  background: linear-gradient(180deg, #87ceeb 0%, #4682b4 100%);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #191970;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .fish-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .fish {
-    position: absolute;
-    font-size: 2rem;
-    /* BUG: All fish animations are DEAD - no movement at all! */
+  position: absolute;
+  font-size: 2rem;
+  /* BUG: All fish animations are DEAD - no movement at all! */
 }
 
 /* BUG: All fish have broken animation names */
 .fish-1 {
-    top: 20%;
-    animation: deadSwimRight 8s linear infinite;
+  top: 20%;
+  animation: deadSwimRight 8s linear infinite;
 }
 
 .fish-2 {
-    top: 40%;
-    animation: brokenSwimLeft 8s linear infinite;
-    animation-delay: 2s;
+  top: 40%;
+  animation: brokenSwimLeft 8s linear infinite;
+  animation-delay: 2s;
 }
 
 .fish-3 {
-    top: 60%;
-    animation: goneSwimRight 8s linear infinite;
-    animation-delay: 4s;
+  top: 60%;
+  animation: goneSwimRight 8s linear infinite;
+  animation-delay: 4s;
 }
 
 .fish-4 {
-    top: 30%;
-    animation: missingSwimLeft 12s linear infinite;
-    animation-delay: 1s;
-    font-size: 2.5rem;
+  top: 30%;
+  animation: missingSwimLeft 12s linear infinite;
+  animation-delay: 1s;
+  font-size: 2.5rem;
 }
 
 .fish-5 {
-    top: 70%;
-    animation: lostSwimRight 10s linear infinite;
-    animation-delay: 3s;
+  top: 70%;
+  animation: lostSwimRight 10s linear infinite;
+  animation-delay: 3s;
 }
 
 .coral-reef {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .coral {
-    position: absolute;
-    bottom: 0;
-    font-size: 3rem;
-    /* BUG: Wrong animation name - no swaying */
-    animation: plantMove 3s ease-in-out infinite;
+  position: absolute;
+  bottom: 0;
+  font-size: 3rem;
+  /* BUG: Wrong animation name - no swaying */
+  animation: plantMove 3s ease-in-out infinite;
 }
 
 .coral-1 {
-    left: 20%;
+  left: 20%;
 }
 
 .coral-2 {
-    left: 50%;
-    animation-delay: 1s;
+  left: 50%;
+  animation-delay: 1s;
 }
 
 .coral-3 {
-    left: 80%;
-    animation-delay: 2s;
+  left: 80%;
+  animation-delay: 2s;
 }
 
 .seaweed {
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    /* BUG: Animation missing entirely */
-    opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  /* BUG: Animation missing entirely */
+  opacity: 0.7;
 }
 
 .seaweed-1 {
-    left: 10%;
+  left: 10%;
 }
 
 .seaweed-2 {
-    left: 60%;
+  left: 60%;
 }
 
 .seaweed-3 {
-    left: 90%;
+  left: 90%;
 }
 
 /* Species Showcase - RESPONSIVE DISASTER ZONE */
 .species-showcase {
-    padding: 4rem 2rem;
-    background: white;
+  padding: 4rem 2rem;
+  background: white;
 }
 
 .species-showcase h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #191970;
-    margin-bottom: 3rem;
-    /* BUG: Wrong animation name */
-    animation: popIn 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #191970;
+  margin-bottom: 3rem;
+  /* BUG: Wrong animation name */
+  animation: popIn 0.8s ease-out;
 }
 
 .species-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    /* BUG: Grid completely broken - way too many columns */
-    grid-template-columns: repeat(10, minmax(50px, 1fr));
-    gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* BUG: Grid completely broken - way too many columns */
+  grid-template-columns: repeat(10, minmax(50px, 1fr));
+  gap: 2rem;
 }
 
 .species-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    /* BUG: No transition - jarring interactions */
-    /* BUG: Wrong animation name */
-    animation: slideUpFade 0.8s ease-out both;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* BUG: No transition - jarring interactions */
+  /* BUG: Wrong animation name */
+  animation: slideUpFade 0.8s ease-out both;
 }
 
-.species-card:nth-child(1) { animation-delay: 0.2s; }
-.species-card:nth-child(2) { animation-delay: 0.4s; }
-.species-card:nth-child(3) { animation-delay: 0.6s; }
+.species-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.species-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.species-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 /* BUG: DISASTER hover - cards disappear! */
 .species-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    opacity: 0; /* Cards vanish on hover! */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  opacity: 0; /* Cards vanish on hover! */
 }
 
 .species-image {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .species-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    /* BUG: No transition */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* BUG: No transition */
 }
 
 /* BUG: Images grow WAY too big */
 .species-card:hover .species-image img {
-    transform: scale(5);
+  transform: scale(5);
 }
 
 .status-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
 
 .species-info {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .species-info h3 {
-    font-size: 1.5rem;
-    color: #191970;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #191970;
+  margin-bottom: 1rem;
 }
 
 .species-info p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .conservation-actions {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .action {
-    background: #87CEEB;
-    color: #191970;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
+  background: #87ceeb;
+  color: #191970;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 /* Ocean Stats - MORE ANIMATION DEATH */
 .ocean-stats {
-    background: linear-gradient(135deg, #191970, #4682B4);
-    padding: 4rem 0;
-    color: white;
+  background: linear-gradient(135deg, #191970, #4682b4);
+  padding: 4rem 0;
+  color: white;
 }
 
 .stats-ocean-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .stats-ocean-container h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    /* BUG: Wrong animation name */
-    animation: titleSlide 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  /* BUG: Wrong animation name */
+  animation: titleSlide 0.8s ease-out;
 }
 
 .ocean-impact-grid {
-    display: grid;
-    /* BUG: Grid responsive disaster - too many columns on mobile */
-    grid-template-columns: repeat(8, minmax(100px, 1fr));
-    gap: 2rem;
+  display: grid;
+  /* BUG: Grid responsive disaster - too many columns on mobile */
+  grid-template-columns: repeat(8, minmax(100px, 1fr));
+  gap: 2rem;
 }
 
 .ocean-stat {
-    text-align: center;
-    /* BUG: Wrong animation name */
-    animation: bubbleAppear 0.8s ease-out both;
+  text-align: center;
+  /* BUG: Wrong animation name */
+  animation: bubbleAppear 0.8s ease-out both;
 }
 
-.ocean-stat:nth-child(1) { animation-delay: 0.2s; }
-.ocean-stat:nth-child(2) { animation-delay: 0.4s; }
-.ocean-stat:nth-child(3) { animation-delay: 0.6s; }
-.ocean-stat:nth-child(4) { animation-delay: 0.8s; }
+.ocean-stat:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.ocean-stat:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.ocean-stat:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.ocean-stat:nth-child(4) {
+  animation-delay: 0.8s;
+}
 
 .stat-bubble {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* BUG: No transition */
-    /* BUG: Wrong animation name - no floating effect */
-    animation: bobbing 3s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* BUG: No transition */
+  /* BUG: Wrong animation name - no floating effect */
+  animation: bobbing 3s ease-in-out infinite;
 }
 
 /* BUG: DISASTER hover - bubbles explode in size! */
 .stat-bubble:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(3); /* WAY too big! */
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(3); /* WAY too big! */
 }
 
 .ocean-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    /* BUG: Wrong animation name */
-    animation: digitCount 1s ease-out 1.5s both;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  /* BUG: Wrong animation name */
+  animation: digitCount 1s ease-out 1.5s both;
 }
 
 .ocean-label {
-    font-size: 1rem;
-    text-align: center;
-    line-height: 1.2;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* BUG: ALL KEYFRAME ANIMATIONS ARE MISSING! */
@@ -373,35 +388,35 @@
 
 /* RESPONSIVE DESIGN DISASTER */
 @media (max-width: 768px) {
-    .hero-ocean h1 {
-        font-size: 2.5rem;
-    }
-    
-    .aquarium {
-        height: 300px;
-        margin: 0 1rem;
-    }
-    
-    .species-grid {
-        /* BUG: Still broken - too many columns on mobile */
-        grid-template-columns: repeat(5, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .ocean-impact-grid {
-        /* BUG: DISASTER - even more columns on mobile! */
-        grid-template-columns: repeat(4, minmax(50px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    .stat-bubble {
-        /* BUG: Way too small on mobile */
-        width: 50px;
-        height: 50px;
-    }
-    
-    .ocean-number {
-        /* BUG: Text too small to read */
-        font-size: 0.5rem;
-    }
+  .hero-ocean h1 {
+    font-size: 2.5rem;
+  }
+
+  .aquarium {
+    height: 300px;
+    margin: 0 1rem;
+  }
+
+  .species-grid {
+    /* BUG: Still broken - too many columns on mobile */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ocean-impact-grid {
+    /* BUG: DISASTER - even more columns on mobile! */
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .stat-bubble {
+    /* BUG: Way too small on mobile */
+    width: 50px;
+    height: 50px;
+  }
+
+  .ocean-number {
+    /* BUG: Text too small to read */
+    font-size: 0.5rem;
+  }
 }

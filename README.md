@@ -10,6 +10,7 @@
 - **This is your target** - elegant, accessible, and engaging wildlife conservation pages
 
 **Then look at the broken version and feel the pain:**
+
 - Open `index.html` and see the chaos
 - Notice how dramatically different it feels from the polished solution
 - **Your mission**: Transform the disasters back into the beautiful working version!
@@ -29,11 +30,13 @@ The Wildlands Conservation website is broken just hours before tomorrow's major 
 **Problems Reported by the Marketing Team:**
 
 ### Animation Issues
+
 - **Hero section feels static**: The main content should smoothly slide in from the left when the page loads, but nothing is happening
-- **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately  
+- **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately
 - **Habitat cards don't flow in**: The conservation area cards should fade up one by one, but they all appear at once
 
-### Interactive Disasters  
+### Interactive Disasters
+
 - **Navigation feels jarring**: The navigation links should smoothly transition when hovered, but they snap between states
 - **Donate button text disappears**: The primary button text becomes completely invisible when hovered
 - **Secondary button jumps**: The "Learn More" button feels jarring when interacted with
@@ -41,11 +44,13 @@ The Wildlands Conservation website is broken just hours before tomorrow's major 
 - **Habitat cards rocket away**: Conservation area cards flip upside down and shoot off screen when hovered
 
 ### Content Issues
+
 - **Images not loading**: The wildlife images are showing as broken image icons instead of the beautiful conservation photos
 - **Section heading invisible**: The "Explore Our Conservation Areas" heading can't be seen
 - **Habitat descriptions unreadable**: The text describing each habitat is nearly invisible
 
 ### Navigation Behavior Issues
+
 - **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
 
 ---
@@ -57,14 +62,16 @@ Before diving into specific bugs, master these essential debugging techniques th
 ### 🧠 The Debugging Mindset
 
 **Don't guess - investigate!** When something looks wrong:
+
 1. **Observe first**: What exactly is different from what you expect?
-2. **Form hypotheses**: What could cause this behavior?  
+2. **Form hypotheses**: What could cause this behavior?
 3. **Test systematically**: Use dev tools to confirm or reject your theories
 4. **Fix incrementally**: Change one thing at a time and test the result
 
 ### 🔍 Essential Dev Tools Techniques
 
 **Elements Panel - Your CSS Detective Tool:**
+
 - Right-click any broken element → "Inspect Element"
 - Look for crossed-out CSS properties (they're being overridden)
 - Check if animations/transitions are applied but not working
@@ -72,6 +79,7 @@ Before diving into specific bugs, master these essential debugging techniques th
 - **Pro tip**: Hover over CSS colors to see if they're visible on the background
 
 **Network Panel - Understanding What's Actually Loading:**
+
 - Open Network tab, refresh the page
 - Filter by "CSS" to see all stylesheets loading
 - Look for 404 errors (red entries) - missing files!
@@ -79,11 +87,13 @@ Before diving into specific bugs, master these essential debugging techniques th
 - **Key question**: Are the files you expect actually loading?
 
 **Console Panel - Catching Silent Errors:**
+
 - Red errors often reveal broken JavaScript or missing resources
 - Yellow warnings might indicate accessibility or resource issues
 - **Pro tip**: If a form isn't working, check here for JavaScript errors
 
 **Animations Inspector - Making Motion Visible:**
+
 - Look for "Animations" panel in dev tools (might be hidden under >> button)
 - Refresh the page and watch for animation timeline bars
 - No animations showing = animation names don't match @keyframes
@@ -92,21 +102,25 @@ Before diving into specific bugs, master these essential debugging techniques th
 ### 🕵️ Common Investigation Patterns
 
 **When Text Is Unreadable:**
+
 - Elements panel → Check the color values of text vs background
 - **Quick test**: Try changing the text color to bright red - can you see it now?
 - Look for inheritance issues - is the color coming from a parent element?
 
 **When Hover Effects Are Broken:**
-- Elements panel → Force hover state with ":hov" button  
+
+- Elements panel → Force hover state with ":hov" button
 - Check if :hover rules exist and aren't being overridden
 - **Quick test**: Add `background: red !important` to :hover rule - does anything change?
 
 **When Layouts Look Wrong:**
+
 - Elements panel → Box model diagram shows actual spacing
 - Look for missing grid/flexbox properties
 - Check if containers have proper structure (missing wrapper divs?)
 
 **When Animations Don't Work:**
+
 - Animation inspector → Are any animations actually running?
 - Elements panel → Check animation property names
 - Network panel → Are CSS files with @keyframes actually loading?
@@ -130,13 +144,14 @@ When you encounter an animation that isn't working, try these systematic approac
 <summary><strong>🎬 Animation Inspector Method</strong></summary>
 
 1. Right-click on an element that should be animating
-2. Select "Inspect Element"  
+2. Select "Inspect Element"
 3. In the Developer Tools, look for the **"Animations"** panel (you might need to click the >> button to find it)
 4. Refresh the page while watching the Animations panel
 5. **What you should see**: Active animations appear as timeline bars
 6. **What indicates a problem**: No animations appear, or animations have error indicators
 
 **Key Questions to Ask:**
+
 - Are any animations showing up in the panel?
 - Do the animation names match what's defined in the CSS?
 - Are the timing and delays what you expect?
@@ -155,6 +170,7 @@ When you encounter an animation that isn't working, try these systematic approac
    - Are there any error indicators (yellow warnings, red X's)?
 
 **Common Problems to Look For:**
+
 - Animation name doesn't match any `@keyframes` definition
 - Animation properties are overridden by more specific selectors
 - Typos in animation names or keyframe names
@@ -171,12 +187,14 @@ When you encounter an animation that isn't working, try these systematic approac
 3. Filter by CSS files (click the "CSS" button in the Network panel)
 
 **Discovery Questions:**
+
 - How many CSS files are loading on the homepage?
 - What are their names? (Write them down!)
 - Are they all loading successfully (200 status codes)?
 - Are there any 404 errors for missing files?
 
 **Investigation Task**: Click on each CSS file name to preview its contents. Can you figure out:
+
 - Which file contains the main site-wide styles (navigation, buttons, etc.)?
 - Which file contains homepage-specific styles (hero section, stats, habitat cards)?
 - Where do you think the `@keyframes` animations are defined?
@@ -202,44 +220,53 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 ## 🦁 Additional Conservation Areas (Choose Your Next Challenge)
 
 ### 🦁 Savanna Section
+
 **What's Obviously Broken:**
+
 - **Layout collapsed**: All animal cards stacked in narrow column instead of grid
 - **Cards fly away on hover**: Animal cards shoot off screen when you hover over them
 - **Text invisible**: Headings and descriptions are unreadable (white/gray on white)
 - **Status badges invisible**: All conservation status labels are same color as background
 
 **Debugging Checklist:**
+
 - [ ] Fix grid layout - animals should display in responsive grid
 - [ ] Fix hover disasters - cards should lift gently, not fly away
-- [ ] Fix text visibility - all text should be readable with good contrast  
+- [ ] Fix text visibility - all text should be readable with good contrast
 - [ ] Fix status badge colors - each status should have distinct, readable colors
 - [ ] Fix navigation link targets - some open in wrong tab/window
 - [ ] Fix hover interactions - images should scale smoothly, not jerk
 
-### 🌊 Ocean Section  
+### 🌊 Ocean Section
+
 **What's Obviously Broken:**
+
 - **All animations dead**: Fish aren't swimming, waves aren't moving, bubbles aren't floating
 - **Layout disaster**: Species cards crammed into impossibly narrow columns
 - **Hover disasters**: Cards disappear when hovered, images explode in size
 - **Images missing**: All marine animal photos showing as broken image icons
 
 **Debugging Checklist:**
+
 - [ ] Fix fish swimming animations - all fish should move across the aquarium
 - [ ] Fix wave animations - ocean waves should move smoothly
 - [ ] Fix bubble floating animations - stats bubbles should gently float up and down
-- [ ] Fix responsive layout - species cards should fit properly on all screen sizes  
+- [ ] Fix responsive layout - species cards should fit properly on all screen sizes
 - [ ] Fix hover interactions - cards should lift, not disappear or explode
 - [ ] Fix broken images - update file extensions from .jpg to .svg
 - [ ] Fix coral/seaweed swaying - underwater plants should move gently
 
 ### 🦇 Cave Section
+
 **What's Obviously Broken:**
+
 - **Text completely invisible**: Almost all text is unreadable (dark text on dark backgrounds)
 - **Navigation invisible**: Logo and links can't be seen
 - **Critical info hidden**: Conservation status and important details are invisible
 - **Animations frozen**: Bats aren't flying, stalactites aren't dripping, lights aren't flickering
 
 **Debugging Checklist:**
+
 - [ ] Fix text contrast - all text should be light colors on dark backgrounds
 - [ ] Fix navigation visibility - logo and links should be clearly visible
 - [ ] Fix section headings - all headings should stand out from backgrounds
@@ -250,14 +277,17 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - [ ] Fix hover states - interactions should make things more visible, not less
 
 ### 📧 Contact Section
+
 **What's Obviously Broken:**
-- **Form disasters**: Buttons don't respond, inputs behave strangely  
+
+- **Form disasters**: Buttons don't respond, inputs behave strangely
 - **Data table chaos**: Wildlife data table has missing or broken structure
 - **Validation mayhem**: Error messages appear in wrong places or not at all
 
 **Debugging Checklist:**
+
 - [ ] Fix form submission - contact form should respond to user interaction
-- [ ] Fix input styling - form fields should look and behave professionally  
+- [ ] Fix input styling - form fields should look and behave professionally
 - [ ] Fix table structure - wildlife data should display in organized rows/columns
 - [ ] Fix validation feedback - error states should be clear and helpful
 - [ ] Fix button interactions - all buttons should have proper hover/click states
@@ -272,8 +302,8 @@ Once the homepage animations are flowing smoothly and all interactions feel poli
 - **Timing matters**: Look for animation-delay and animation-duration conflicts
 - **Cascade issues**: More specific selectors can override your animations
 
-**Remember**: The goal isn't just to make it work, but to understand *why* it wasn't working. Use the developer tools to investigate the root cause of each issue!
+**Remember**: The goal isn't just to make it work, but to understand _why_ it wasn't working. Use the developer tools to investigate the root cause of each issue!
 
 ---
 
-*Good luck! The wildlife is counting on you to make this presentation a success.* 🦁🌍
+_Good luck! The wildlife is counting on you to make this presentation a success._ 🦁🌍

@@ -2,236 +2,245 @@
 
 /* Hero Section */
 .hero-savanna {
-    background: linear-gradient(135deg, #DEB887 0%, #CD853F 100%);
-    padding: 4rem 0;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg, #deb887 0%, #cd853f 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-savanna::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-    animation: drift 20s linear infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
+    repeat;
+  animation: drift 20s linear infinite;
 }
 
 .savanna-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-savanna h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out;
 }
 
 .savanna-description {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out 0.3s both;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 /* Wildlife Grid */
 .wildlife-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .wildlife-grid h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #8B4513;
-    margin-bottom: 3rem;
-    animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .animals-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    animation: fadeInUp 1s ease-out 0.5s both;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .animal-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
 }
 
 .animal-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    border-color: #CD853F;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #cd853f;
 }
 
 .animal-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .animal-card:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .animal-info {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .animal-info h3 {
-    font-size: 1.5rem;
-    color: #8B4513;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #8b4513;
+  margin-bottom: 0.5rem;
 }
 
 .status {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .status.endangered {
-    background: #ff6b6b;
-    color: white;
+  background: #ff6b6b;
+  color: white;
 }
 
 .status.critically-endangered {
-    background: #d63031;
-    color: white;
+  background: #d63031;
+  color: white;
 }
 
 .status.vulnerable {
-    background: #fdcb6e;
-    color: #2d3436;
+  background: #fdcb6e;
+  color: #2d3436;
 }
 
 .status.stable {
-    background: #55a3ff;
-    color: white;
+  background: #55a3ff;
+  color: white;
 }
 
 .animal-info p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .learn-more {
-    color: #CD853F;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  color: #cd853f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .learn-more:hover {
-    color: #8B4513;
+  color: #8b4513;
 }
 
 /* Conservation Impact */
 .conservation-impact {
-    background: linear-gradient(135deg, #8B4513, #A0522D);
-    padding: 4rem 0;
-    color: white;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  padding: 4rem 0;
+  color: white;
 }
 
 .conservation-impact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .impact-grid {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .impact-stat {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.8s ease-out both;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
-.impact-stat:nth-child(1) { animation-delay: 0.2s; }
-.impact-stat:nth-child(2) { animation-delay: 0.4s; }
-.impact-stat:nth-child(3) { animation-delay: 0.6s; }
-.impact-stat:nth-child(4) { animation-delay: 0.8s; }
+.impact-stat:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.impact-stat:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.impact-stat:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.impact-stat:nth-child(4) {
+  animation-delay: 0.8s;
+}
 
 .impact-stat:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
 }
 
 .stat-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .stat-value {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    animation: countUp 1s ease-out 1s both;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: countUp 1s ease-out 1s both;
 }
 
 .stat-label {
-    font-size: 1rem;
-    opacity: 0.9;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
 /* Animations */
 @keyframes drift {
-    from {
-        transform: translateX(-100px);
-    }
-    to {
-        transform: translateX(100px);
-    }
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(100px);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-savanna h1 {
-        font-size: 2.5rem;
-    }
-    
-    .animals-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
+  .hero-savanna h1 {
+    font-size: 2.5rem;
+  }
+
+  .animals-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }

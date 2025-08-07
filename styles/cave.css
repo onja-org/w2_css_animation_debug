@@ -9,494 +9,512 @@
 
 /* BUG: Dark theme with TERRIBLE contrast - text will be unreadable! */
 .cave-theme {
-    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-    /* BUG: Text color nearly matches background */
-    color: #1a1a1a; /* Dark text on dark background - invisible! */
-    min-height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  /* BUG: Text color nearly matches background */
+  color: #1a1a1a; /* Dark text on dark background - invisible! */
+  min-height: 100vh;
 }
 
 /* Navigation CONTRAST DISASTER */
 .cave-theme .main-nav {
-    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
-    border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  border-bottom: 1px solid #333;
 }
 
 .cave-theme .main-nav .logo h2 {
-    /* BUG: Logo invisible on dark nav */
-    color: #2d2d2d;
+  /* BUG: Logo invisible on dark nav */
+  color: #2d2d2d;
 }
 
 .cave-theme .nav-links a {
-    /* BUG: Links nearly invisible */
-    color: #333333;
+  /* BUG: Links nearly invisible */
+  color: #333333;
 }
 
 .cave-theme .nav-links a:hover,
 .cave-theme .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* BUG: Active/hover links become even darker */
-    color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* BUG: Active/hover links become even darker */
+  color: #1a1a1a;
 }
 
 /* Cave Main Content */
 .cave-main {
-    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-    min-height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  min-height: 100vh;
 }
 
 /* Hero Section */
 .hero-cave {
-    position: relative;
-    min-height: 70vh;
-    background: radial-gradient(ellipse at center, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
-    overflow: hidden;
+  position: relative;
+  min-height: 70vh;
+  background: radial-gradient(ellipse at center, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
+  overflow: hidden;
 }
 
 .cave-entrance {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stalactites {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  pointer-events: none;
 }
 
 .stalactite {
-    position: absolute;
-    top: -20px;
-    font-size: 3rem;
-    opacity: 0.7;
-    /* BUG: Wrong animation name - no dripping motion */
-    animation: rockDrip 4s ease-in-out infinite;
+  position: absolute;
+  top: -20px;
+  font-size: 3rem;
+  opacity: 0.7;
+  /* BUG: Wrong animation name - no dripping motion */
+  animation: rockDrip 4s ease-in-out infinite;
 }
 
 .stalactite-1 {
-    left: 15%;
+  left: 15%;
 }
 
 .stalactite-2 {
-    left: 35%;
-    animation-delay: 1s;
+  left: 35%;
+  animation-delay: 1s;
 }
 
 .stalactite-3 {
-    left: 65%;
-    animation-delay: 2s;
+  left: 65%;
+  animation-delay: 2s;
 }
 
 .stalactite-4 {
-    left: 85%;
-    animation-delay: 3s;
+  left: 85%;
+  animation-delay: 3s;
 }
 
 .cave-content {
-    text-align: center;
-    max-width: 800px;
-    z-index: 10;
-    position: relative;
+  text-align: center;
+  max-width: 800px;
+  z-index: 10;
+  position: relative;
 }
 
 .cave-title {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    /* BUG: Title same color as background - invisible! */
-    color: #0d0d0d;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    /* BUG: Wrong animation name */
-    animation: titleRise 1s ease-out;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  /* BUG: Title same color as background - invisible! */
+  color: #0d0d0d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  /* BUG: Wrong animation name */
+  animation: titleRise 1s ease-out;
 }
 
 .cave-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    /* BUG: Description text nearly invisible */
-    color: #262626;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    /* BUG: Animation missing */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  /* BUG: Description text nearly invisible */
+  color: #262626;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* BUG: Animation missing */
 }
 
 .cave-stats-inline {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* BUG: Wrong animation name */
-    animation: statsShow 1s ease-out 0.6s both;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* BUG: Wrong animation name */
+  animation: statsShow 1s ease-out 0.6s both;
 }
 
 .inline-stat {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 600;
-    /* BUG: Stats text invisible on semi-transparent background */
-    color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  /* BUG: Stats text invisible on semi-transparent background */
+  color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .cave-lighting {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .light-beam {
-    position: absolute;
-    width: 100px;
-    height: 300px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
-    border-radius: 50%;
-    /* BUG: Wrong animation name - no flickering lights */
-    animation: lightFlash 3s ease-in-out infinite;
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+  border-radius: 50%;
+  /* BUG: Wrong animation name - no flickering lights */
+  animation: lightFlash 3s ease-in-out infinite;
 }
 
 .light-1 {
-    left: 20%;
-    top: 10%;
+  left: 20%;
+  top: 10%;
 }
 
 .light-2 {
-    left: 60%;
-    top: 5%;
-    animation-delay: 1s;
+  left: 60%;
+  top: 5%;
+  animation-delay: 1s;
 }
 
 .light-3 {
-    left: 80%;
-    top: 15%;
-    animation-delay: 2s;
+  left: 80%;
+  top: 15%;
+  animation-delay: 2s;
 }
 
 /* Section Titles - MORE CONTRAST DISASTERS */
 .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    /* BUG: Section titles completely invisible */
-    color: #1a1a1a;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* BUG: Wrong animation name */
-    animation: headerSlideUp 0.8s ease-out;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  /* BUG: Section titles completely invisible */
+  color: #1a1a1a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* BUG: Wrong animation name */
+  animation: headerSlideUp 0.8s ease-out;
 }
 
 /* Cave Ecosystem - TEXT VISIBILITY NIGHTMARE */
 .cave-ecosystem {
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 .ecosystem-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .cave-zones {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
 }
 
 .cave-zone {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    /* BUG: No transition */
-    /* BUG: Wrong animation name */
-    animation: zoneReveal 0.8s ease-out both;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  /* BUG: No transition */
+  /* BUG: Wrong animation name */
+  animation: zoneReveal 0.8s ease-out both;
 }
 
-.cave-zone:nth-child(1) { animation-delay: 0.2s; }
-.cave-zone:nth-child(2) { animation-delay: 0.4s; }
-.cave-zone:nth-child(3) { animation-delay: 0.6s; }
+.cave-zone:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.cave-zone:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.cave-zone:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 /* BUG: Hover makes content even LESS visible */
 .cave-zone:hover {
-    background: rgba(0, 0, 0, 0.3); /* Darker on hover! */
-    transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.3); /* Darker on hover! */
+  transform: translateY(-5px);
 }
 
 .zone-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .zone-header h3 {
-    font-size: 1.5rem;
-    /* BUG: Zone headings invisible */
-    color: #262626;
-    margin: 0;
+  font-size: 1.5rem;
+  /* BUG: Zone headings invisible */
+  color: #262626;
+  margin: 0;
 }
 
 .zone-light {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    /* BUG: Light indicators invisible */
-    color: #333333;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  /* BUG: Light indicators invisible */
+  color: #333333;
 }
 
 .zone-content p {
-    /* BUG: All descriptive text unreadable */
-    color: #2d2d2d;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  /* BUG: All descriptive text unreadable */
+  color: #2d2d2d;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .zone-species {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .species {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    /* BUG: Species labels invisible */
-    color: #404040;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  /* BUG: Species labels invisible */
+  color: #404040;
 }
 
 /* Bat Colony - ANIMATION TIMING CHAOS */
 .bat-colony {
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
 }
 
 .bat-flight-area {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 400px;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
-    border-radius: 20px;
-    overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 400px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .bat-swarm {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .bat {
-    position: absolute;
-    font-size: 1.5rem;
-    color: #a0a0a0;
-    /* BUG: ALL BATS have wrong animation name - completely still! */
-    animation: batMovement 8s linear infinite;
+  position: absolute;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  /* BUG: ALL BATS have wrong animation name - completely still! */
+  animation: batMovement 8s linear infinite;
 }
 
 /* BUG: All bats have broken animation timing */
 .bat-1 {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-    animation-duration: 6s;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 6s;
 }
 
 .bat-2 {
-    top: 40%;
-    left: 20%;
-    animation-delay: 1s;
-    animation-duration: 8s;
+  top: 40%;
+  left: 20%;
+  animation-delay: 1s;
+  animation-duration: 8s;
 }
 
 .bat-3 {
-    top: 60%;
-    left: 30%;
-    animation-delay: 2s;
-    animation-duration: 7s;
+  top: 60%;
+  left: 30%;
+  animation-delay: 2s;
+  animation-duration: 7s;
 }
 
 .bat-4 {
-    top: 30%;
-    left: 60%;
-    animation-delay: 3s;
-    animation-duration: 9s;
+  top: 30%;
+  left: 60%;
+  animation-delay: 3s;
+  animation-duration: 9s;
 }
 
 .bat-5 {
-    top: 70%;
-    left: 70%;
-    animation-delay: 0.5s;
-    animation-duration: 6.5s;
+  top: 70%;
+  left: 70%;
+  animation-delay: 0.5s;
+  animation-duration: 6.5s;
 }
 
 .bat-6 {
-    top: 50%;
-    left: 80%;
-    animation-delay: 1.5s;
-    animation-duration: 7.5s;
+  top: 50%;
+  left: 80%;
+  animation-delay: 1.5s;
+  animation-duration: 7.5s;
 }
 
 .bat-7 {
-    top: 80%;
-    left: 50%;
-    animation-delay: 2.5s;
-    animation-duration: 8.5s;
+  top: 80%;
+  left: 50%;
+  animation-delay: 2.5s;
+  animation-duration: 8.5s;
 }
 
 .bat-8 {
-    top: 10%;
-    left: 40%;
-    animation-delay: 3.5s;
-    animation-duration: 5.5s;
+  top: 10%;
+  left: 40%;
+  animation-delay: 3.5s;
+  animation-duration: 5.5s;
 }
 
 .colony-info {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /* BUG: No transition */
-    /* BUG: Wrong animation name */
-    animation: cardEnter 0.8s ease-out both;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* BUG: No transition */
+  /* BUG: Wrong animation name */
+  animation: cardEnter 0.8s ease-out both;
 }
 
-.info-card:nth-child(1) { animation-delay: 0.2s; }
-.info-card:nth-child(2) { animation-delay: 0.4s; }
-.info-card:nth-child(3) { animation-delay: 0.6s; }
+.info-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.info-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.info-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 /* BUG: Hover makes cards DARKER */
 .info-card:hover {
-    background: rgba(0, 0, 0, 0.2); /* Much darker! */
-    transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.2); /* Much darker! */
+  transform: translateY(-5px);
 }
 
 .info-card h3 {
-    font-size: 1.3rem;
-    /* BUG: Info card titles invisible */
-    color: #333333;
-    margin-bottom: 1rem;
+  font-size: 1.3rem;
+  /* BUG: Info card titles invisible */
+  color: #333333;
+  margin-bottom: 1rem;
 }
 
 .info-card p {
-    /* BUG: All info text unreadable */
-    color: #404040;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  /* BUG: All info text unreadable */
+  color: #404040;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .urgency-indicator {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .urgency-indicator.high {
-    /* BUG: High priority indicator invisible on dark background */
-    background: #2d2d2d;
-    color: #1a1a1a; /* Invisible text! */
+  /* BUG: High priority indicator invisible on dark background */
+  background: #2d2d2d;
+  color: #1a1a1a; /* Invisible text! */
 }
 
 /* Conservation Efforts - MORE VISIBILITY DISASTERS */
 .conservation-efforts {
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
 }
 
 .efforts-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .effort-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    /* BUG: No transition */
-    /* BUG: Wrong animation name */
-    animation: effortShow 0.8s ease-out both;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  /* BUG: No transition */
+  /* BUG: Wrong animation name */
+  animation: effortShow 0.8s ease-out both;
 }
 
-.effort-card:nth-child(1) { animation-delay: 0.2s; }
-.effort-card:nth-child(2) { animation-delay: 0.4s; }
-.effort-card:nth-child(3) { animation-delay: 0.6s; }
+.effort-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.effort-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.effort-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 /* BUG: Effort cards become DARKER on hover */
 .effort-card:hover {
-    background: rgba(0, 0, 0, 0.3); /* Much darker! */
-    transform: translateY(-10px);
+  background: rgba(0, 0, 0, 0.3); /* Much darker! */
+  transform: translateY(-10px);
 }
 
 .effort-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    /* BUG: Wrong animation name - icons don't pulse */
-    animation: iconBounce 2s ease-in-out infinite;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* BUG: Wrong animation name - icons don't pulse */
+  animation: iconBounce 2s ease-in-out infinite;
 }
 
 .effort-card h3 {
-    font-size: 1.5rem;
-    /* BUG: Effort card titles invisible */
-    color: #333333;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  /* BUG: Effort card titles invisible */
+  color: #333333;
+  margin-bottom: 1rem;
 }
 
 .effort-card p {
-    /* BUG: All effort descriptions unreadable */
-    color: #404040;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  /* BUG: All effort descriptions unreadable */
+  color: #404040;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .effort-stats {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    /* BUG: All stats invisible */
-    color: #2d2d2d;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  /* BUG: All stats invisible */
+  color: #2d2d2d;
 }
 
 /* Footer */
 .cave-footer {
-    background: #0d0d0d;
-    /* BUG: Footer text invisible */
-    color: #1a1a1a;
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #333;
+  background: #0d0d0d;
+  /* BUG: Footer text invisible */
+  color: #1a1a1a;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #333;
 }
 
 /* BUG: ALL KEYFRAME ANIMATIONS ARE MISSING OR HAVE WRONG NAMES! */
@@ -506,32 +524,32 @@
 
 /* RESPONSIVE DESIGN - MAKES CONTRAST EVEN WORSE */
 @media (max-width: 768px) {
-    .cave-title {
-        font-size: 2.5rem;
-    }
-    
-    .cave-stats-inline {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .cave-zones {
-        gap: 1.5rem;
-    }
-    
-    .zone-header {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
-    }
-    
-    .colony-info {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .efforts-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+  .cave-title {
+    font-size: 2.5rem;
+  }
+
+  .cave-stats-inline {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cave-zones {
+    gap: 1.5rem;
+  }
+
+  .zone-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .colony-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .efforts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

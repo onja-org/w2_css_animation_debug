@@ -1,184 +1,187 @@
 /* Wildlands Conservation - Main Stylesheet (BROKEN VERSION) */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
 /* Navigation Styles */
 .main-nav {
-    background: linear-gradient(135deg, #2d5016, #4a7c23);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: linear-gradient(135deg, #2d5016, #4a7c23);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 .logo h2 {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    /* BUG: transition removed - no smooth hover effect */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  /* BUG: transition removed - no smooth hover effect */
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* BUG: transform removed - no lift effect */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* BUG: transform removed - no lift effect */
 }
 
 /* Button Styles */
 .btn-primary {
-    background: linear-gradient(135deg, #e67e22, #d35400);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
 }
 
 /* BUG: broken hover state - text becomes invisible */
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
-    color: #e67e22; /* Same as background - text disappears! */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+  color: #e67e22; /* Same as background - text disappears! */
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #2d5016;
-    padding: 1rem 2rem;
-    border: 2px solid #2d5016;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    /* BUG: no transition - jarring hover effect */
+  background: transparent;
+  color: #2d5016;
+  padding: 1rem 2rem;
+  border: 2px solid #2d5016;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  /* BUG: no transition - jarring hover effect */
 }
 
 .btn-secondary:hover {
-    background: #2d5016;
-    color: white;
-    transform: translateY(-2px);
+  background: #2d5016;
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* Card Styles */
-.stat-card, .habitat-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+.stat-card,
+.habitat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
-.stat-card:hover, .habitat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.stat-card:hover,
+.habitat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .btn-primary, .btn-secondary {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Footer */
 footer {
-    background: #2d5016;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
+  background: #2d5016;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
 }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* BUG: animation name doesn't match usage in homepage.css */
 @keyframes countUpWrong {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

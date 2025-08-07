@@ -2,230 +2,239 @@
 
 /* Hero Section */
 .hero-savanna {
-    background: linear-gradient(135deg, #DEB887 0%, #CD853F 100%);
-    padding: 4rem 0;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg, #deb887 0%, #cd853f 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-savanna::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-    /* BUG: Animation name doesn't exist */
-    animation: floatingDots 20s linear infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
+    repeat;
+  /* BUG: Animation name doesn't exist */
+  animation: floatingDots 20s linear infinite;
 }
 
 .savanna-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-savanna h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* BUG: Wrong animation name */
-    animation: slideUp 1s ease-out;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* BUG: Wrong animation name */
+  animation: slideUp 1s ease-out;
 }
 
 .savanna-description {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    /* BUG: No animation defined */
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* BUG: No animation defined */
 }
 
 /* Wildlife Grid - MAJOR LAYOUT DISASTER */
 .wildlife-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .wildlife-grid h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    /* BUG: Text color same as background - invisible! */
-    color: #f8f9fa;
-    margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  /* BUG: Text color same as background - invisible! */
+  color: #f8f9fa;
+  margin-bottom: 3rem;
 }
 
 /* BUG: Missing .animals-container selector - grid will collapse! */
 /* This CSS targets a class that doesn't exist in the HTML */
 .animals-container-missing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 /* Animal cards without proper container will stack vertically */
 .animal-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    /* BUG: Broken transition */
-    transition: transform 0.3s ease;
-    border: 3px solid transparent;
-    /* BUG: All cards stuck in tiny width */
-    width: 200px;
-    margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* BUG: Broken transition */
+  transition: transform 0.3s ease;
+  border: 3px solid transparent;
+  /* BUG: All cards stuck in tiny width */
+  width: 200px;
+  margin: 0 auto;
 }
 
 /* BUG: DISASTER HOVER EFFECT - Cards fly off screen! */
 .animal-card:hover {
-    transform: translateX(500px) rotate(45deg) scale(1.5);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    border-color: #CD853F;
-    z-index: 1000;
+  transform: translateX(500px) rotate(45deg) scale(1.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #cd853f;
+  z-index: 1000;
 }
 
 .animal-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    /* BUG: No transition for smooth scaling */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* BUG: No transition for smooth scaling */
 }
 
 /* BUG: Image grows WAY too big on hover */
 .animal-card:hover img {
-    transform: scale(3);
+  transform: scale(3);
 }
 
 .animal-info {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .animal-info h3 {
-    font-size: 1.5rem;
-    color: #8B4513;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #8b4513;
+  margin-bottom: 0.5rem;
 }
 
 .status {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 /* BUG: All status badges have wrong/invisible colors */
 .status.endangered {
-    background: white;
-    color: white; /* Invisible! */
+  background: white;
+  color: white; /* Invisible! */
 }
 
 .status.critically-endangered {
-    background: #f8f9fa;
-    color: #f8f9fa; /* Invisible! */
+  background: #f8f9fa;
+  color: #f8f9fa; /* Invisible! */
 }
 
 .status.vulnerable {
-    background: yellow;
-    color: yellow; /* Invisible! */
+  background: yellow;
+  color: yellow; /* Invisible! */
 }
 
 .status.stable {
-    background: blue;
-    color: blue; /* Invisible! */
+  background: blue;
+  color: blue; /* Invisible! */
 }
 
 .animal-info p {
-    /* BUG: Text completely unreadable */
-    color: #f8f9fa;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+  /* BUG: Text completely unreadable */
+  color: #f8f9fa;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .learn-more {
-    color: #CD853F;
-    text-decoration: none;
-    font-weight: 600;
-    /* BUG: No transition */
+  color: #cd853f;
+  text-decoration: none;
+  font-weight: 600;
+  /* BUG: No transition */
 }
 
 /* BUG: Learn more links become invisible on hover */
 .learn-more:hover {
-    color: white;
+  color: white;
 }
 
 /* Conservation Impact */
 .conservation-impact {
-    background: linear-gradient(135deg, #8B4513, #A0522D);
-    padding: 4rem 0;
-    color: white;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  padding: 4rem 0;
+  color: white;
 }
 
 .conservation-impact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    /* BUG: Wrong animation name */
-    animation: appearFromBelow 0.8s ease-out;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  /* BUG: Wrong animation name */
+  animation: appearFromBelow 0.8s ease-out;
 }
 
 .impact-grid {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    /* BUG: Grid columns completely broken */
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  /* BUG: Grid columns completely broken */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .impact-stat {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    /* BUG: Broken transition */
-    transition: all 0.3s ease;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  /* BUG: Broken transition */
+  transition: all 0.3s ease;
 }
 
 /* BUG: Stats have wrong animation delays and names */
-.impact-stat:nth-child(1) { animation: wrongFade 0.8s ease-out 0.2s both; }
-.impact-stat:nth-child(2) { animation: wrongFade 0.8s ease-out 0.4s both; }
-.impact-stat:nth-child(3) { animation: wrongFade 0.8s ease-out 0.6s both; }
-.impact-stat:nth-child(4) { animation: wrongFade 0.8s ease-out 0.8s both; }
+.impact-stat:nth-child(1) {
+  animation: wrongFade 0.8s ease-out 0.2s both;
+}
+.impact-stat:nth-child(2) {
+  animation: wrongFade 0.8s ease-out 0.4s both;
+}
+.impact-stat:nth-child(3) {
+  animation: wrongFade 0.8s ease-out 0.6s both;
+}
+.impact-stat:nth-child(4) {
+  animation: wrongFade 0.8s ease-out 0.8s both;
+}
 
 /* BUG: DISASTER HOVER - Stats fly away! */
 .impact-stat:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-200px) rotate(180deg);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-200px) rotate(180deg);
 }
 
 .stat-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .stat-value {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    /* BUG: Wrong animation name */
-    animation: numberGrow 1s ease-out 1s both;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  /* BUG: Wrong animation name */
+  animation: numberGrow 1s ease-out 1s both;
 }
 
 .stat-label {
-    font-size: 1rem;
-    opacity: 0.9;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
 /* BUG: Missing animations that are referenced above */
@@ -235,19 +244,19 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-savanna h1 {
-        font-size: 2.5rem;
-    }
-    
-    /* BUG: Targets non-existent .animals-container */
-    .animals-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .impact-grid {
-        /* BUG: Still broken on mobile */
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+  .hero-savanna h1 {
+    font-size: 2.5rem;
+  }
+
+  /* BUG: Targets non-existent .animals-container */
+  .animals-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .impact-grid {
+    /* BUG: Still broken on mobile */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
