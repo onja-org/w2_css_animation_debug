@@ -1,328 +1,173 @@
-# Wildlands Conservation - Animation Debug Lab
-
-<img src="./images/animation_debug_preview.png"  alt="Homepage Image" />
-
-## 🌟 First Things First: See the Vision
-
-**Before you start debugging, explore the working version to understand what you're building toward:**
-
-- Open `index-solution.html` in your browser
-- Navigate through all the pages: `savanna-solution.html`, `ocean-solution.html`, `cave-solution.html`, `contact-solution.html`
-- Experience the smooth animations, beautiful layouts, and professional interactions
-- **This is your target** - elegant, accessible, and engaging wildlife conservation pages
-
-**Then look at the broken version and feel the pain:**
-
-- Open `index.html` -- navigate around to the different biomes and see the chaos
-- Notice how dramatically different it feels from the polished solution
-- **Your mission**: Transform the disasters into a beautiful working version!
-- Yours doesn't have to be exactly like the solution, but it should not feel broken -- it should feel polished and professional.
-
-You have 4 hours for this lab, so take your time in really investigating the issues and seeing if you can figure out how to fix them on your own. If you get totally stuck, you can look at the solution files for inspiration, but try to avoid that until you've spent a good amount of time debugging the issue. When you do look at a solution, try to understand _why_ the solution works, not just copy it.
-
-Before you start your debugging journey, take some time to read through the developer tools survival guide below. It will help you build a strong foundation for investigating and fixing the issues you'll encounter.
-
----
-
-## 🛠️ Developer Tools Survival Guide
-
-Before diving into specific bugs, master these essential debugging techniques that will serve you throughout this lab (and your career!):
-
-### 🧠 The Debugging Mindset
-
-**Don't guess - investigate!** When something looks wrong:
-
-1. **Observe first**: What exactly is different from what you expect?
-2. **Form hypotheses**: What could cause this behavior?
-3. **Test systematically**: Use dev tools to confirm or reject your theories
-4. **Fix incrementally**: Change one thing at a time and test the result
-
-### 🔍 Essential Dev Tools Techniques
-
-**Elements Panel - Your CSS Detective Tool:**
-
-- Right-click any broken element → "Inspect Element"
-- Look for crossed-out CSS properties (they're being overridden)
-- Check if animations/transitions are applied but not working
-- Toggle CSS properties on/off to test theories
-- **Pro tip**: Hover over CSS colors to see if they're visible on the background
-
-**Network Panel - Understanding What's Actually Loading:**
-
-- Open Network tab, refresh the page
-- Filter by "CSS" to see all stylesheets loading
-- Look for 404 errors (red entries) - missing files!
-- Click file names to preview their contents
-- **Key question**: Are the files you expect actually loading?
-
-**Console Panel - Catching Silent Errors:**
-
-- Red errors often reveal broken JavaScript or missing resources
-- Yellow warnings might indicate accessibility or resource issues
-- **Pro tip**: If a form isn't working, check here for JavaScript errors
-
-**Animations Inspector - Making Motion Visible:**
-
-- Look for "Animations" panel in dev tools (might be hidden under >> button)
-- Refresh the page and watch for animation timeline bars
-- No animations showing = animation names don't match @keyframes
-- **Pro tip**: Slow down animations to see what's actually happening
-
-### 🕵️ Common Investigation Patterns
-
-**When Text Is Unreadable:**
-
-- Elements panel → Check the color values of text vs background
-- **Quick test**: Try changing the text color to bright red - can you see it now?
-- Look for inheritance issues - is the color coming from a parent element?
-
-**When Hover Effects Are Broken:**
-
-- Elements panel → Force hover state with ":hov" button
-- Check if :hover rules exist and aren't being overridden
-- **Quick test**: Add `background: red !important` to :hover rule - does anything change?
-
-**When Layouts Look Wrong:**
-
-- Elements panel → Box model diagram shows actual spacing
-- Look for missing grid/flexbox properties
-- Check if containers have proper structure (missing wrapper divs?)
-
-**When Animations Don't Work:**
-
-- Animation inspector → Are any animations actually running?
-- Elements panel → Check animation property names
-- Network panel → Are CSS files with @keyframes actually loading?
-- **Quick test**: Try `animation: fadeInUp 1s ease` - does the name get recognized?
-
-### 🎯 Pro Debugging Tips
-
-- **Change one thing at a time** - don't fix multiple bugs simultaneously
-- **Use bright colors for testing** - `background: red` makes problems obvious
-- **Check the Console** - many visual bugs are caused by JavaScript errors
-- **Refresh often** - CSS changes don't always update without a refresh
-- **Mobile responsive issues** - use device toolbar to test different screen sizes
-
----
-
-## 🔍 Investigation Techniques
-
-When you encounter an animation that isn't working, try these systematic approaches:
-
-<details>
-<summary><strong>🎬 Animation Inspector Method</strong></summary>
-
-1. Right-click on an element that should be animating
-2. Select "Inspect Element"
-3. In the Developer Tools, look for the **"Animations"** panel (you might need to click the >> button to find it)
-4. Refresh the page while watching the Animations panel
-5. **What you should see**: Active animations appear as timeline bars
-6. **What indicates a problem**: No animations appear, or animations have error indicators
-
-**Key Questions to Ask:**
-
-- Are any animations showing up in the panel?
-- Do the animation names match what's defined in the CSS?
-- Are the timing and delays what you expect?
-
-</details>
-
-<details>
-<summary><strong>🔍 Elements Panel CSS Investigation</strong></summary>
-
-1. Inspect the element that should be animating
-2. In the **Elements** panel, look at the **Styles** section on the right
-3. Find the CSS rules for animation properties
-4. **What to check**:
-   - Is the `animation` property present and not crossed out?
-   - Does the animation name match a `@keyframes` rule?
-   - Are there any error indicators (yellow warnings, red X's)?
-
-**Common Problems to Look For:**
-
-- Animation name doesn't match any `@keyframes` definition
-- Animation properties are overridden by more specific selectors
-- Typos in animation names or keyframe names
-
-</details>
-
-<details>
-<summary><strong>🌐 Network Panel for Understanding File Structure</strong></summary>
-
-**Pre-Debug Activity**: Before diving into animation fixes, use the Network tab to map out which CSS files are actually loading on the homepage.
-
-1. Open Developer Tools and go to the **Network** tab
-2. Refresh the page
-3. Filter by CSS files (click the "CSS" button in the Network panel)
-
-**Discovery Questions:**
-
-- How many CSS files are loading on the homepage?
-- What are their names? (Write them down!)
-- Are they all loading successfully (200 status codes)?
-- Are there any 404 errors for missing files?
-
-**Investigation Task**: Click on each CSS file name to preview its contents. Can you figure out:
-
-- Which file contains the main site-wide styles (navigation, buttons, etc.)?
-- Which file contains homepage-specific styles (hero section, stats, habitat cards)?
-- Where do you think the `@keyframes` animations are defined?
-
-**Why This Matters**: When animations break, you need to know which files to investigate. The Network tab shows you the actual files being loaded, not just what's linked in the HTML!
-
-</details>
-
----
-
-## 🚨 URGENT: Critical Bug Fixes Needed
-
-The Wildlands Conservation website is broken just hours before tomorrow's major donor presentation! The development team is counting on you to identify and fix the critical issues that are preventing the site from making the impact it needs.
-
-**Your Mission**: Debug and fix animation and interaction issues across the conservation site. Use your developer tools investigation skills to identify problems and implement solutions.
-
----
-
-
-## 🏠 Homepage (START HERE - High Priority)
-
-**Problems Reported by the Marketing Team:**
-
-### Animation Issues
-
-- **Hero section feels static**: The main content should smoothly slide in from the left when the page loads, but nothing is happening
-- **Stats section lacks impact**: The impact numbers (2,500 animals, etc.) should animate in with a staggered delay, but they just appear immediately
-- **Habitat cards don't flow in**: The conservation area cards should fade up one by one, but they all appear at once
-
-### Interactive Disasters
-
-- **Navigation feels jarring**: The navigation links should smoothly transition when hovered, but they snap between states
-- **Donate button text disappears**: The primary button text becomes completely invisible when hovered
-- **Secondary button jumps**: The "Learn More" button feels jarring when interacted with
-- **Hero image goes crazy**: The main elephant image spins and flies off screen when hovered
-- **Habitat cards rocket away**: Conservation area cards flip upside down and shoot off screen when hovered
-
-### Content Issues
-
-- **Images not loading**: The wildlife images are showing as broken image icons instead of the beautiful conservation photos
-- **Section heading invisible**: The "Explore Our Conservation Areas" heading can't be seen
-- **Habitat descriptions unreadable**: The text describing each habitat is nearly invisible
-
-### Navigation Behavior Issues
-
-- **Links opening incorrectly**: Some navigation links are opening in new tabs when they should stay in the same window, creating a confusing user experience
-
-<img src="./images/animation_debug_1.png" width="500" alt="Homepage Image" />
-
----
-
-## ✅ When You've Fixed the Homepage
-
-Once the homepage animations are flowing smoothly and all interactions feel polished:
-
-1. **Test your fixes**: Refresh the page multiple times to ensure animations work consistently
-2. **Check responsive behavior**: Try different browser window sizes
-3. **Verify navigation**: Make sure all links behave as expected (same tab vs. new tab)
-
-**Then proceed to**: Choose your next debugging challenge from the conservation areas below!
-
----
-
-## 🦁 Additional Conservation Areas (Choose Your Next Challenge)
-
-### 🦁 Savanna Section
-
-**What's Obviously Broken:**
-
-- **Layout collapsed**: All animal cards stacked in narrow column instead of grid
-- **Cards fly away on hover**: Animal cards shoot off screen when you hover over them
-- **Text invisible**: Headings and descriptions are unreadable (white/gray on white)
-- **Status badges invisible**: All conservation status labels are same color as background
-
-**Debugging Checklist:**
-
-- [ ] Fix grid layout - animals should display in responsive grid
-- [ ] Fix hover disasters - cards should lift gently, not fly away
-- [ ] Fix text visibility - all text should be readable with good contrast
-- [ ] Fix status badge colors - each status should have distinct, readable colors
-- [ ] Fix navigation link targets - some open in wrong tab/window
-- [ ] Fix hover interactions - images should scale smoothly, not jerk
-
-<img src="./images/animation_debug_2.png" width="400" alt="Homepage Image" />
-
-### 🌊 Ocean Section
-
-**What's Obviously Broken:**
-
-- **All animations dead**: Fish aren't swimming, waves aren't moving, bubbles aren't floating
-- **Layout disaster**: Species cards crammed into impossibly narrow columns
-- **Hover disasters**: Cards disappear when hovered, images explode in size
-- **Images missing**: All marine animal photos showing as broken image icons
-
-**Debugging Checklist:**
-
-- [ ] Fix fish swimming animations - all fish should move across the aquarium
-- [ ] Fix wave animations - ocean waves should move smoothly
-- [ ] Fix bubble floating animations - stats bubbles should gently float up and down
-- [ ] Fix responsive layout - species cards should fit properly on all screen sizes
-- [ ] Fix hover interactions - cards should lift, not disappear or explode
-- [ ] Fix broken images - update file extensions from .jpg to .svg
-- [ ] Fix coral/seaweed swaying - underwater plants should move gently
-
-<img src="./images/animation_debug_3.png" width="400" alt="Homepage Image" />
-
-### 🦇 Cave Section
-
-**What's Obviously Broken:**
-
-- **Text completely invisible**: Almost all text is unreadable (dark text on dark backgrounds)
-- **Navigation invisible**: Logo and links can't be seen
-- **Critical info hidden**: Conservation status and important details are invisible
-- **Animations frozen**: Bats aren't flying, stalactites aren't dripping, lights aren't flickering
-
-**Debugging Checklist:**
-
-- [ ] Fix text contrast - all text should be light colors on dark backgrounds
-- [ ] Fix navigation visibility - logo and links should be clearly visible
-- [ ] Fix section headings - all headings should stand out from backgrounds
-- [ ] Fix info card text - descriptions and details should be readable
-- [ ] Fix bat flying animations - bats should fly around the cave area
-- [ ] Fix stalactite dripping - cave formations should move slightly
-- [ ] Fix light flickering - cave lighting should create atmospheric effects
-- [ ] Fix hover states - interactions should make things more visible, not less
-
-<img src="./images/animation_debug_4.png" width="400" alt="Homepage Image" />
-
-### 📧 Contact Section
-
-**What's Obviously Broken:**
-
-- **Form disasters**: Buttons don't respond, inputs behave strangely
-- **Data table chaos**: Wildlife data table has missing or broken structure
-- **Validation mayhem**: Error messages appear in wrong places or not at all
-
-**Debugging Checklist:**
-
-- [ ] Fix form submission - contact form should respond to user interaction with a popup alert message
-    - You don't know much about JavaScript, but see if you can figure out what's wrong! There are some hints in the HTML comments. If you can't figure this out, it's ok.
-- [ ] Fix input styling - form fields should look and behave professionally
-- [ ] Fix table structure - wildlife data should display in organized rows/columns
-- [ ] Fix validation feedback - error states should be clear and helpful
-- [ ] Fix button interactions - all buttons should have proper hover/click states
-
-<img src="./images/animation_debug_5.png" width="400" alt="Homepage Image" />
-
----
-
-## 💡 General Debugging Tips
-
-- **Start with the obvious**: Is the CSS file actually loading?
-- **Check the console**: Are there any JavaScript or CSS errors?
-- **Animation names are case-sensitive**: `fadeInUp` ≠ `fadeInup`
-- **Timing matters**: Look for animation-delay and animation-duration conflicts
-- **Cascade issues**: More specific selectors can override your animations
-
-**Remember**: The goal isn't just to make it work, but to understand _why_ it wasn't working. Use the developer tools to investigate the root cause of each issue!
-
----
-
-_Good luck! The wildlife is counting on you to make this presentation a success._ 🦁🌍
+# CSS Animation Debug Lab - Wildlands Conservation
+
+This lab challenges students to debug and fix CSS animations and interactions
+
+## 🚀 Getting Started
+
+1. **Navigate to the lab directory**: `cd lab/`
+   
+2. **Start with the working versions** to understand the target:
+   - Open `solutions/index-solution.html` in your browser
+   - Navigate through all solution pages to see professional animations
+   - Experience the smooth interactions and polished feel
+
+3. **Examine the broken versions** to understand the challenge:
+   - Open `student-files/index.html` to see the issues
+   - Navigate through the broken pages to feel the problems
+   - **Your mission**: Fix the animations and interactions to match the solutions
+
+4. **Use the lab instructions** for detailed guidance:
+   - Read `README.md` in the lab folder for comprehensive debugging techniques
+   - Follow the systematic approaches for investigating issues
+   - Use developer tools effectively to identify root causesfe conservation website. Students will use developer tools to investigate broken animations, fix layout issues, and restore interactive elements to create a polished, professional experience.
+
+## 🎯 Learning Objectives
+
+- Master CSS animation properties and `@keyframes` syntax
+- Debug animation issues using browser developer tools
+- Fix layout problems with CSS Grid and Flexbox
+- Implement smooth hover interactions and transitions
+- Understand CSS cascade and specificity in animation contexts
+- Practice systematic debugging approaches
+
+## 🏗️ Project Structure
+
+```
+├── assets/                                      # Shared resources (images, graphics)
+│   └── images/                                  # Wildlife SVGs and preview images
+├── lab/                                         # All lab materials and files
+│   ├── student-files/                           # Files for students to debug
+│   │   ├── index.html                           # Homepage (broken)
+│   │   ├── savanna.html                         # Savanna biome (broken)
+│   │   ├── ocean.html                           # Ocean biome (broken) 
+│   │   ├── cave.html                            # Cave biome (broken)
+│   │   ├── contact.html                         # Contact form (broken)
+│   │   └── styles/                              # Broken CSS files
+│   │       ├── main.css                         # Site-wide styles
+│   │       ├── homepage.css                     # Homepage-specific styles
+│   │       ├── savanna.css, ocean.css, cave.css # Biome-specific styles
+│   │       └── contact.css                      # Contact form styles
+│   ├── solutions/                               # Reference implementations
+│   │   ├── index-solution.html                 # Working homepage
+│   │   ├── savanna-solution.html               # Working savanna page
+│   │   ├── ocean-solution.html                 # Working ocean page
+│   │   ├── cave-solution.html                  # Working cave page
+│   │   ├── contact-solution.html               # Working contact form
+│   │   └── styles/                              # Working CSS files
+│   │       ├── main-solution.css               # Fixed site-wide styles
+│   │       ├── homepage-solution.css           # Fixed homepage styles
+│   │       └── [biome]-solution.css            # Fixed biome styles
+│   └── README.md                                # Detailed debugging instructions
+└── README.md                                    # Project overview (this file)
+```
+
+## 🚨 The Challenge
+
+The Wildlands Conservation website is broken hours before a major donor presentation! Students must identify and fix:
+
+### Critical Issues Across All Pages:
+- **Animation failures**: Hero sections, stats counters, and card animations not working
+- **Interactive disasters**: Buttons with invisible text, elements flying off screen on hover
+- **Layout breakdowns**: Grid systems collapsed, responsive design broken
+- **Visibility problems**: Text unreadable due to color contrast issues
+- **Navigation issues**: Links opening in wrong tabs/windows
+
+### Key Problem Areas:
+1. **Homepage**: Static hero section, broken stats animations, habitat cards appearing all at once
+2. **Savanna**: Collapsed grid layout, cards shooting off screen on hover
+3. **Ocean**: Dead fish animations, missing wave movements, broken bubble effects
+4. **Cave**: Invisible text on dark backgrounds, frozen bat animations
+5. **Contact**: Non-functional forms, broken data tables
+
+## 🛠️ Skills Developed
+
+### CSS Animation Mastery:
+- `@keyframes` definition and naming conventions
+- Animation properties: duration, delay, timing-function, iteration-count
+- Transform properties: translate, scale, rotate
+- Transition properties for smooth interactions
+
+### Developer Tools Proficiency:
+- Animation Inspector for debugging motion
+- Elements panel for CSS investigation
+- Network panel for resource loading issues
+- Console panel for error identification
+
+### Layout & Responsive Design:
+- CSS Grid and Flexbox debugging
+- Responsive design principles
+- Box model understanding
+- Positioning and z-index management
+
+### Color Theory & Accessibility:
+- Color contrast for readability
+- Visual hierarchy through color choices
+- Accessible hover states and focus indicators
+
+## ⏱️ Time Allocation (4 hours total)
+
+- **1 hour**: Developer tools mastery and investigation techniques
+- **2 hours**: Homepage fixes (high priority)
+- **1 hour**: Additional conservation areas (student choice)
+
+## 🎨 Design Principles Reinforced
+
+- **Smooth, purposeful animations** enhance user experience
+- **Consistent interaction patterns** build user confidence
+- **Accessible color choices** ensure inclusivity
+- **Responsive layouts** work across all devices
+- **Professional polish** makes content trustworthy
+
+## 🏆 Success Criteria
+
+Students will demonstrate mastery by:
+- Restoring smooth, professional animations across the site
+- Fixing all hover and interaction states
+- Ensuring readable text with proper contrast
+- Creating responsive layouts that work on all screen sizes
+- Implementing consistent navigation behavior
+
+## 🦁 Conservation Theme Integration
+
+The wildlife conservation theme provides:
+- **Meaningful context** for technical learning
+- **Real-world application** of web development skills
+- **Engagement through storytelling** about environmental protection
+- **Visual appeal** through beautiful animal imagery and nature themes
+
+## � File Organization Benefits
+
+This reorganized structure provides several advantages:
+
+- **Clear separation**: Student files and solutions are distinct, preventing accidental spoilers
+- **Logical grouping**: All student work files are together, all solutions together
+- **Shared assets**: Images and resources are centralized to avoid duplication
+- **Easy navigation**: Students know exactly where to find their working files
+- **Clean workspace**: The main directory focuses on key files (README, config files)
+- **Scalable**: Easy to add new biomes or features without cluttering directories
+
+## �🚀 Getting Started
+
+1. **Start with the working versions** to understand the target:
+   - Open `solutions/index-solution.html` in your browser
+   - Navigate through all solution pages to see professional animations
+   - Experience the smooth interactions and polished feel
+
+2. **Examine the broken versions** to understand the challenge:
+   - Open `student-files/index.html` to see the issues
+   - Navigate through the broken pages to feel the problems
+   - **Your mission**: Fix the animations and interactions to match the solutions
+
+3. **Use the lab instructions** for detailed guidance:
+   - Read `lab/README.md` for comprehensive debugging techniques
+   - Follow the systematic approaches for investigating issues
+   - Use developer tools effectively to identify root causes
+
+## 💡 Quick Start Tips
+
+- **Navigate to lab directory first**: `cd lab/` then start your work
+- **Time allocation**: 4 hours total (1 hour tools mastery, 2 hours homepage, 1 hour additional areas)
+- **Start with homepage**: `student-files/index.html` is the highest priority
+- **Use developer tools**: Animation inspector, Elements panel, Network panel, Console
+- **Think systematically**: Investigate → Hypothesize → Test → Fix incrementally
+- **Compare with solutions**: When stuck, study the working versions to understand why they work
