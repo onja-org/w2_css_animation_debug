@@ -227,7 +227,7 @@ The Wildlands Conservation website is broken just hours before tomorrow's major 
 
 <img src="../assets/images/animation_debug_1.png" width="500" alt="Homepage Image" />
 
----
+---https://github.com/onja-org/w2_css_animation_debug.git
 
 ## ✅ When You've Fixed the Homepage
 

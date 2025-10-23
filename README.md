@@ -5,7 +5,7 @@ This lab challenges students to debug and fix CSS animations and interactions
 ## 🚀 Getting Started
 
 1. **Navigate to the lab directory**: `cd lab/`
-   
+
 2. **Start with the working versions** to understand the target:
    - Open `solutions/index-solution.html` in your browser
    - Navigate through all solution pages to see professional animations
@@ -20,6 +20,8 @@ This lab challenges students to debug and fix CSS animations and interactions
    - Read `README.md` in the lab folder for comprehensive debugging techniques
    - Follow the systematic approaches for investigating issues
    - Use developer tools effectively to identify root causesfe conservation website. Students will use developer tools to investigate broken animations, fix layout issues, and restore interactive elements to create a polished, professional experience.
+
+5. Run `npm test` to check if your task pass
 
 ## 🎯 Learning Objectives
 
